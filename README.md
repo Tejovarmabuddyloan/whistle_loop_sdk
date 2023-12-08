@@ -1,15 +1,15 @@
-# whistle_loop_sdk
+# Whistle Loop SDK Flutter Plugin
 
-A new Flutter project.
+`whistle_loop_sdk` is a Flutter plugin that seamlessly integrates Whistle Loop SDK functionality into your Flutter applications. This plugin provides easy access to essential device information, including the device ID, package name, IP address, device type, time, date, platform, and network connection type.
 
 ## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+This project serves as a starting point for a Flutter plug-in package, specifically designed for incorporating Whistle Loop SDK features into your Flutter app. The package includes platform-specific implementation code for Android and iOS.
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
 
+To use this plugin, add `whistle_loop_sdk` as a [dependency in your pubspec.yaml file](https://flutter.dev/platform-plugins/).
+
+```yaml
+dependencies:
+  whistle_loop_sdk: ^0.0.1
