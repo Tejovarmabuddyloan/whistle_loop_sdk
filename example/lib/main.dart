@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
 
             ElevatedButton(
-              child: Text('Fetch All Data'),
+              child: Text('Fetch All Datas'),
               onPressed: () {
                 whistleLoopEvents("onlcikmybutton");
 
