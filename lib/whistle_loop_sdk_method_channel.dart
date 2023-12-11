@@ -10,6 +10,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'whistle_loop_sdk_platform_interface.dart';
 
 /// An implementation of [WhistleLoopSdkPlatform] that uses method channels.
+ /// This plugin provides easy access to essential device information, including the device ID, package name, IP address, device type, time, date, platform, and network connection type.
 class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
@@ -21,7 +22,7 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
         await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
   }
-
+  /// Initializes and retrieves the device ID.
   @override
   Future<String?> initDeviceId() async {
     String? advertisingId;
@@ -32,14 +33,14 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
     }
     return advertisingId;
   }
-
+  /// Retrieves the package name.
   @override
   Future<String?> getpac() async {
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
     String? packageName = packageInfo.packageName;
     return packageName;
   }
-
+  /// Retrieves the IP address.
   @override
   Future<String> getIP() async {
     try {
@@ -51,7 +52,7 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
       return 'Failed to get IP address.';
     }
   }
-
+  /// Retrieves the device type.
   @override
   Future<String?> getDeviceType() async {
     DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
@@ -64,6 +65,7 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
     }
     return null;
   }
+  /// Retrieves the current time.
 
   @override
   Future<String> getTime() async {
@@ -73,7 +75,7 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
 
     return time;
   }
-
+  /// Retrieves the current date.
   @override
   Future<String> getDate() async {
     DateTime now = DateTime.now();
@@ -82,7 +84,7 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
 
     return date;
   }
-
+  /// Retrieves the platform.
   @override
   Future<String> getPlatform() async {
     if (Platform.isAndroid) {
@@ -93,6 +95,7 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
       return 'Unknown';
     }
   }
+  /// Retrieves the network connection type.
 
   @override
   Future<String> getConnectionType() async {

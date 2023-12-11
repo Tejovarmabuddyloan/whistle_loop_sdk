@@ -26,27 +26,35 @@ abstract class WhistleLoopSdkPlatform extends PlatformInterface {
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
+
   Future<String?> initDeviceId() {
     throw UnimplementedError('initDeviceId() has not been implemented.');
   }
+
   Future<String?> getpac() {
     throw UnimplementedError('initDeviceId() has not been implemented.');
   }
+
   Future<String?> getIP() {
     throw UnimplementedError('initDeviceId() has not been implemented.');
   }
+
   Future<String?> getPlatform() {
     throw UnimplementedError('initDeviceId() has not been implemented.');
   }
+
   Future<String?> getDeviceType() {
     throw UnimplementedError('initDeviceId() has not been implemented.');
   }
+
   Future<String> getTime() {
     throw UnimplementedError('initDeviceId() has not been implemented.');
   }
+
   Future<String> getDate() {
     throw UnimplementedError('initDeviceId() has not been implemented.');
   }
+
   Future<String?> getConnectionType() {
     throw UnimplementedError('initDeviceId() has not been implemented.');
   }

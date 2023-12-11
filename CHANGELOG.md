@@ -13,3 +13,10 @@
 
 * Code Formatting and Static Analysis:
   - Formatted the Dart files using the Dart formatter. This includes the files `whistle_loop_sdk.dart` and `whistle_loop_sdk_method_channel.dart`.
+
+## 0.0.4
+
+* Added Dartdoc comments:
+  - Added Dartdoc comments to all the methods in the `MethodChannelWhistleLoopSdk` class in the `lib/whistle_loop_sdk_method_channel.dart` file for better code readability and understanding of its functionality.
+* Improved API documentation:
+  - Improved the API documentation to meet the Dart style guide recommendation of documenting at least 20% of the public API elements.
