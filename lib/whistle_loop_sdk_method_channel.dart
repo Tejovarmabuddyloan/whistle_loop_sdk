@@ -1,12 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'dart:io';
-import 'package:advertising_id/advertising_id.dart';//initDeviceId
+import 'package:advertising_id/advertising_id.dart'; //initDeviceId
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:get_ip_address/get_ip_address.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
-
 
 import 'whistle_loop_sdk_platform_interface.dart';
 
@@ -18,7 +17,8 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+    final version =
+        await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
   }
 
@@ -33,7 +33,6 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
     return advertisingId;
   }
 
-
   @override
   Future<String?> getpac() async {
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
@@ -42,7 +41,6 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
   }
 
   @override
-
   Future<String> getIP() async {
     try {
       var ipAddress = IpAddress(type: RequestType.json);
@@ -96,8 +94,6 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
     }
   }
 
-
-
   @override
   Future<String> getConnectionType() async {
     final connectivityResult = await (Connectivity().checkConnectivity());
@@ -119,5 +115,4 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
       return 'Unknown';
     }
   }
-
 }

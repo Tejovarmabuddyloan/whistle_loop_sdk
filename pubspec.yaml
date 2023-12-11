@@ -1,6 +1,6 @@
 name: whistle_loop_sdk
 description:  A Flutter plugin that integrates Whistle Loop SDK functionality into Flutter applications, providing easy access to essential device information.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/Tejovarmabuddyloan/whistle_loop_sdk.git
 
 environment:
@@ -12,11 +12,11 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  http: ^0.13.3
+  http: ^1.0.0
   logging: ^1.0.2
   plugin_platform_interface: ^2.1.7
-  package_info_plus: ^1.4.3+1
-  device_info_plus: ^8.2.2
+  package_info_plus: ^4.2.0
+  device_info_plus: ^9.0.0
   advertising_id: ^2.6.0
   get_ip_address: ^0.0.5
   connectivity_plus: ^5.0.2

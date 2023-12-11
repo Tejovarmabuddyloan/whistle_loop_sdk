@@ -1,10 +1,10 @@
-
 import 'whistle_loop_sdk_platform_interface.dart';
 
 class WhistleLoopSdk {
   Future<String?> getPlatformVersion() {
     return WhistleLoopSdkPlatform.instance.getPlatformVersion();
   }
+
   Future<String?> initDeviceId() {
     return WhistleLoopSdkPlatform.instance.initDeviceId();
   }
@@ -25,10 +25,10 @@ class WhistleLoopSdk {
     return WhistleLoopSdkPlatform.instance.getDeviceType();
   }
 
-
   Future<String?> getTime() {
     return WhistleLoopSdkPlatform.instance.getTime();
   }
+
   Future<String?> getDate() {
     return WhistleLoopSdkPlatform.instance.getDate();
   }
