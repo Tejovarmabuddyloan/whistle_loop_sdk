@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               child: Text('Fetch All Data'),
               onPressed: () {
-                whistle_loop_events("onlcikmybutton");
+                whistleLoopEvents("onlcikmybutton");
 
               },
             ),
