@@ -58,6 +58,12 @@ class MockWhistleLoopSdkPlatform
     // TODO: implement initDeviceId
     throw UnimplementedError();
   }
+
+  @override
+  Future<String?> getTimezone() {
+    // TODO: implement getTimezone
+    throw UnimplementedError();
+  }
 }
 
 void main() {

@@ -7,6 +7,8 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:get_ip_address/get_ip_address.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 
+import 'package:flutter_timezone/flutter_timezone.dart';
+
 import 'whistle_loop_sdk_platform_interface.dart';
 
 /// An implementation of [WhistleLoopSdkPlatform] that uses method channels.
@@ -46,9 +48,9 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
     try {
       var ipAddress = IpAddress(type: RequestType.json);
       dynamic data = await ipAddress.getIpAddress();
-      return data.toString();
+      return data['ip'].toString();
     } on IpAddressException catch (exception) {
-      print(exception.message);
+      debugPrint(exception.message);
       return 'Failed to get IP address.';
     }
   }
@@ -80,10 +82,16 @@ class MethodChannelWhistleLoopSdk extends WhistleLoopSdkPlatform {
   Future<String> getDate() async {
     DateTime now = DateTime.now();
     String date = '${now.year}-${now.month}-${now.day}';
-    // String time = '${now.hour}:${now.minute}:${now.second}';
-
     return date;
+
   }
+
+  @override
+  Future<String> getTimezone() async {
+    final String currentTimeZone = await FlutterTimezone.getLocalTimezone();
+    return currentTimeZone;
+  }
+
   /// Retrieves the platform.
   @override
   Future<String> getPlatform() async {

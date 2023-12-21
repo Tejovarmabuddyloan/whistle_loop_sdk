@@ -36,4 +36,7 @@ class WhistleLoopSdk {
   Future<String?> getConnectionType() {
     return WhistleLoopSdkPlatform.instance.getConnectionType();
   }
+  Future<String?> getTimezone() {
+    return WhistleLoopSdkPlatform.instance.getTimezone();
+  }
 }
